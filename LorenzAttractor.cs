@@ -31,22 +31,12 @@ public class LorenzAttractor : MonoBehaviour
     private bool isRunning = true;
 
     public List<Vector3> MyPositions = new List<Vector3>();
-   // ArrayList<Vector> points = new ArrayList<PVector>();
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+ 
 
     private void ButterFlyInit(){
 
 
         rotFly = rotFly + 0.005f;
-       // rotateY(rotFly);
-        //rotFly = rotFly + 0.005;
-     //   rotateY(rotation);
-
         float dt = 0.01f;
         float dx = (a * (y - x)) * dt;
         float dy = (x * (c - z) - y) * dt;
@@ -54,19 +44,11 @@ public class LorenzAttractor : MonoBehaviour
         x = x + dx;
         y = y + dy;
         z = z + dz;
-        // point(x, y, z);
-        // points.add(new PVector(x, y, z));
+       
 
          MyPositions.Add(new Vector3(x, y, z));
-        Debug.DrawLine (Vector3.zero, new Vector3(x, y, z), Color.red);
-        // beginShape();
+         Debug.DrawLine (Vector3.zero, new Vector3(x, y, z), Color.red);
 
-        /*
-                for (PVector v : points) {
-                    vertex(v.x, v.y, v.z);
-                }*/
-        // endShape();
-        //}
 
 
     }
