@@ -5,7 +5,7 @@
  In particular, the Lorenz attractor is a set of chaotic solutions of the Lorenz system. 
  *  
  *
- * 	The Butterfly Effect 
+ * The Butterfly Effect 
  * @author  Riccardo Barbatti
  * @version 1.0, 08/03/22
  * @
@@ -26,14 +26,13 @@ public class LorenzAttractor : MonoBehaviour
 	private float b = 8.0f/3.0f;
 	private float c = 28.0f;
     
-    private float rotFly = 0f;
+        private float rotFly = 0f;
+        private bool isRunning = true;
 
-    private bool isRunning = true;
-
-    public List<Vector3> MyPositions = new List<Vector3>();
+        public List<Vector3> MyPositions = new List<Vector3>();
  
-
-    private void ButterFlyInit(){
+       // Init Draw
+       private void ButterFlyInit(){
 
 
         rotFly = rotFly + 0.005f;
